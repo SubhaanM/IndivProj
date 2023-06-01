@@ -93,6 +93,9 @@ app.post('/calculate', (req, res) => {
         if (err) throw err;
         console.log("Number of records inserted: " + result.affectedRows);
     });
+
+    // Send a response back to the client
+    res.json({ message: `The calculated calorie intake for ${name} is ${calorieIntake}` });
 });
 
 // Define a route handler for GET requests to all the URLs.
