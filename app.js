@@ -18,6 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from 'public' directory
 app.use(express.static('public'));
 
+// Serve JS and CSS files from their specific directories
+app.use('/js', express.static(path.join(__dirname, 'public/js')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
+
 // Parse URL-encoded and JSON bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -98,15 +102,44 @@ app.post('/calculate', (req, res) => {
     res.json({ message: `The calculated calorie intake for ${name} is ${calorieIntake}` });
 });
 
+app.post('/trackerData', (req, res) => {
+    // Get data from the request body
+    const { date, caloriesEaten, caloriesBurned, weight } = req.body;
+
+    // SQL query to insert data into the 'nutrition' table
+    const sql = 'INSERT INTO Nutrition (date, caloriesEaten, caloriesBurned, weight) VALUES ?';
+    const values = [
+        [date, caloriesEaten, caloriesBurned, weight]
+    ];
+    db.query(sql, [values], (err, result) => {
+        if (err) throw err;
+        console.log("Number of records inserted: " + result.affectedRows);
+    });
+
+    // Send a response back to the client
+    res.json({ message: `Data for ${date} is saved` });
+});
+
+app.get('/trackerData', (req, res) => {
+    // SQL query to get data from the 'nutrition' table
+    const sql = 'SELECT * FROM Nutrition ORDER BY date DESC';
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+
+        // Send the results back to the client
+        res.json(results);
+    });
+});
+
 // Define a route handler for GET requests to all the URLs.
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
-app.get('/page1', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'page1.html'));
+app.get('/calculator', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'calculator.html'));
 });
-app.get('/page2', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'page2.html'));
+app.get('/tracker', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'tracker.html'));
 });
 
 // Start the server
