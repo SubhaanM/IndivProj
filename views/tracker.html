@@ -2,45 +2,68 @@
 <html>
 
 <head>
+    <!-- Setting the title of the page -->
     <title>Nutrition Tracker</title>
+
+    <!-- Linking the page stylesheet -->
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Setting the favicon of the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+    <!-- Importing Chart.js library for creating charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Nutrition Tracker</h1>
+        <!-- Banner image for the page -->
+        <div class="banner-container">
+            <img src="/images/banner.png" alt="Banner">
+        </div>
     </header>
 
+    <!-- Navigation bar -->
     <nav>
         <ul>
+            <!-- Navigation links -->
             <li><a href="/">Home</a></li>
             <li><a href="/calculator">Calorie Calculator</a></li>
             <li><a href="/tracker">Nutrition Tracker</a></li>
+            <li><a href="/gyms">Nearby Gyms</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <h2>Track your Nutrition</h2>
+
+        <!-- Nutrition tracking form -->
         <form id="tracker-form" action="/trackerData" method="post">
+            <!-- Input fields for the form -->
             <label for="date">Date:</label><br>
             <input type="date" id="date" name="date" required><br>
 
             <label for="calories-eaten">Calories Eaten:</label><br>
-            <input type="number" id="calories-eaten" name="caloriesEaten" required><br>
+            <input type="number" id="caloriesEaten" name="caloriesEaten" required><br>
 
             <label for="calories-burned">Calories Burned:</label><br>
-            <input type="number" id="calories-burned" name="caloriesBurned" required><br>
+            <input type="number" id="caloriesBurned" name="caloriesBurned" required><br>
 
             <label for="weight">Today's Weight (in lbs):</label><br>
             <input type="number" id="weight" name="weight" required><br>
 
+            <!-- Submit button for the form -->
             <input type="submit" value="Submit">
         </form>
     
-     <h2>Your History</h2>
+        <!-- History table -->
+        <h2>Your History</h2>
         <table id="history-table">
             <thead>
+                <!-- Column headings -->
                 <tr>
                     <th>Date</th>
                     <th>Calories Eaten</th>
@@ -49,16 +72,32 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Data to be populated dynamically -->
+                <!-- Table to be populated dynamically -->
             </tbody>
         </table>
 
+        <!-- Progress chart -->
         <h2>Your Progress</h2>
-        <div id="progress-chart">
+        <canvas id="progress-chart"></canvas>
             <!-- Chart to be populated dynamically -->
-        </div>
     </div>
+
+    <!-- Linking the page script -->
     <script src="/js/script.js"></script>
+
+    <!-- Script to handle URL parameters and display messages -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            var params = new URLSearchParams(window.location.search);
+
+            // Check if the 'message' parameter is present
+            if(params.has('message')) {
+                // Display the message to the user
+                alert(params.get('message'));
+            }
+        };
+    </script>
 </body>
 
 </html>
