@@ -1,0 +1,1338 @@
+CREATE DATABASE  IF NOT EXISTS `calories` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `calories`;
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
+--
+-- Host: localhost    Database: calories
+-- ------------------------------------------------------
+-- Server version	8.0.33
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `calories`
+--
+
+DROP TABLE IF EXISTS `calories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `calories` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `weight` float DEFAULT NULL,
+  `height` float DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `activity` varchar(20) DEFAULT NULL,
+  `goal` varchar(20) DEFAULT NULL,
+  `calories` float DEFAULT NULL,
+  `timestamp` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `calories`
+--
+
+LOCK TABLES `calories` WRITE;
+/*!40000 ALTER TABLE `calories` DISABLE KEYS */;
+INSERT INTO `calories` VALUES (1,NULL,30,70,180,NULL,'1.50',NULL,250,'2023-05-31 03:33:15'),(2,NULL,30,70,180,NULL,'1.50',NULL,2500,'2023-05-31 03:33:15'),(3,NULL,4,4,4,NULL,'4.00',NULL,256,'2023-05-31 03:33:15'),(4,'alpha',1,1,2,'male','moderate','gain',642,'2023-05-31 03:33:15'),(5,'alpha',1,1,2,'male','moderate','gain',642,'2023-05-31 03:33:15'),(6,'gdfegr',3,3,3,'male','active','gain',678,'2023-05-31 03:33:15'),(7,'new',2,2,3,'female','moderate','maintain',1036,'2023-05-31 03:33:15'),(8,'alpha',1,1,1,'male','active','gain',636,'2023-05-31 03:33:15'),(9,'alpha',1,1,1,'male','active','gain',636,'2023-05-31 03:34:36'),(10,'343',3,3,4,'male','light','gain',659,'2023-05-31 03:44:02'),(11,'343',3,3,4,'male','light','gain',659,'2023-05-31 04:00:56'),(12,'yo',70,1,1,'male','active','gain',-168,'2023-06-01 01:23:28'),(13,'yo2',1,1,1,'male','active','maintain',136,'2023-06-01 01:26:30'),(14,'yo',1,1,1,'male','light','gain',608,'2023-06-01 01:32:10'),(15,'alpha',1,1,1,'male','active','gain',636,'2023-06-01 01:36:46'),(16,'s',1,1,1,'male','active','gain',636,'2023-06-01 01:38:34'),(17,'s',1,1,1,'male','active','gain',636,'2023-06-01 01:43:33'),(18,'new',3,3,3,'male','active','gain',678,'2023-06-01 01:44:32'),(19,'new',1,2,1,'male','active','maintain',146,'2023-06-01 01:46:00'),(20,'pleaseWork',1,3,3,'male','active','gain',701,'2023-06-01 01:48:15'),(21,'okok',9,2,2,'male','active','gain',575,'2023-06-01 01:54:39'),(22,'plsworkinshallah',90,1,1,'male','active','gain',-401,'2023-06-01 01:57:01'),(23,'2',2,1,1,'male','active','gain',624,'2023-06-01 01:59:35'),(24,'new',2,1,2,'male','active','gain',646,'2023-06-01 02:04:17'),(25,'yo',1,2,2,'male','active','gain',668,'2023-06-01 02:05:15'),(26,'new',2,3,3,'male','active','gain',689,'2023-06-01 02:06:25'),(27,'7878',1,2,2,'male','active','maintain',168,'2023-06-01 02:06:45'),(28,'PLEASE',10,1,1,'male','moderate','maintain',28,'2023-06-01 02:25:59'),(29,'alpha',2,2,2,'male','active','gain',657,'2023-06-01 02:45:07'),(30,'alpha',1,1,1,'male','active','gain',636,'2023-06-02 01:56:02'),(31,'alpha',-1,1,1,'female','active','gain',1654,'2023-06-02 01:57:37'),(32,'script',4345,32532500,25325200,'male','active','gain',904943000,'2023-06-02 01:58:02'),(33,'bismillah',1,1,1,'male','active','gain',636,'2023-06-02 02:01:46'),(34,'testfr',25,143,71,'male','moderate','maintain',2622,'2023-06-02 02:14:33'),(35,'testfr',25,143,71,'male','active','gain',3418,'2023-06-02 02:15:45'),(36,'yo',1,1,1,'male','active','gain',636,'2023-06-02 04:33:50'),(37,'yo',1,1,1,'male','active','gain',636,'2023-06-02 04:35:16'),(38,'new',1,1,1,'male','active','gain',636,'2023-06-02 05:33:37'),(39,'alpha',2,2,2,'male','active','gain',657,'2023-06-02 05:47:46'),(40,'909',9,1,1,'male','active','gain',542,'2023-06-02 05:56:47'),(41,'alpha',1,1,2,'male','active','gain',658,'2023-06-02 16:01:22'),(42,'anam',29,141,61,'female','sedentary','lose',1203,'2023-06-05 20:48:25'),(43,'mo',21,202,864,'male','active','maintain',20972,'2023-06-06 07:44:16'),(44,'mo',21,202,74,'male','active','maintain',3665,'2023-06-06 07:46:07'),(45,'sub',22,1,1,'male','active','gain',391,'2023-06-06 11:28:40');
+/*!40000 ALTER TABLE `calories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `nutrition`
+--
+
+DROP TABLE IF EXISTS `nutrition`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `nutrition` (
+  `idNutrition` int NOT NULL AUTO_INCREMENT,
+  `user_id` int DEFAULT NULL,
+  `date` date NOT NULL,
+  `caloriesEaten` float NOT NULL,
+  `caloriesBurned` float NOT NULL,
+  `weight` float NOT NULL,
+  `timestamp` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idNutrition`),
+  KEY `fk_user_id_idx` (`user_id`),
+  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `nutrition`
+--
+
+LOCK TABLES `nutrition` WRITE;
+/*!40000 ALTER TABLE `nutrition` DISABLE KEYS */;
+INSERT INTO `nutrition` VALUES (1,NULL,'2023-06-02',1,1,1,'2023-06-02 06:03:29'),(2,NULL,'2023-06-02',1,1,2,'2023-06-02 16:01:45'),(3,3,'2023-06-06',1,1,1,'2023-06-06 00:07:50'),(4,3,'2023-06-06',2,2,2,'2023-06-06 00:10:35'),(5,3,'2023-06-06',2500,120,165,'2023-06-06 00:24:54'),(6,3,'2023-06-03',11111,1111,502,'2023-06-06 00:52:15'),(7,3,'2023-06-06',2,2,2,'2023-06-06 01:38:33'),(8,3,'2023-06-06',2,2,786,'2023-06-06 01:49:09'),(9,5,'2023-06-06',1,1,2,'2023-06-06 01:51:36'),(10,5,'2023-06-07',2,2,3,'2023-06-06 01:51:51'),(11,5,'2023-06-05',2,2,4,'2023-06-06 01:52:12'),(12,5,'2023-06-06',2,2,4,'2023-06-06 01:52:36'),(13,5,'2023-06-06',3,3,4,'2023-06-06 11:29:04');
+/*!40000 ALTER TABLE `nutrition` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username_UNIQUE` (`username`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'55555','sm@hi.com','$2b$10$lsBR9BNnUD8trf.1FNtGbeKTeYwKDR01E/dmvBHjGr3v5AVT953na'),(2,'subii','sub@hi.com','$2b$10$rBj5alj0Ct50oj0/kNLdeO1vz5VUgqXKiEwy5tRi76mtivK0.Owyq'),(3,'subhaan','subhaan@hi.com','$2b$10$fkMS9xODrY.jLjfIxyu5SeZAtyI/4HMDanHgp.u6KIbeS5rPYBYie'),(4,'anam123','anam@hfiafhia.com','$2b$10$jaIoyc3m2KODCSiZXno/kORvpHcFW9zOZd9eftAN3N8KFb70jCbSG'),(5,'subhaan2','subhaan2@yolo.com','$2b$10$bXLNn73mAlU8505NtDDhUOwpbBKEdsLjv5EgSsRBztsBDwKFMlOni'),(6,'yolo123','123@hi.com','$2b$10$Mn2imlhMw1en/VUUJ0Yp6eIhuwfeYgd0hGX6tp6UstfYAUPZkCFCa');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-06-06 14:23:15
+
+
+// Necessary modules
+const express = require('express');
+const cors = require('cors'); //cross-origin resource sharing
+const bcrypt = require('bcrypt'); //this is for password hashing
+const session = require('express-session');
+const mysql = require('mysql');
+const path = require('path');
+const bodyParser = require('body-parser');
+
+// Initialise the app
+const app = express();
+
+// Enabling CORS for all routes
+app.use(cors());
+
+// Use middleware to parse incoming JSON data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Serve static files from 'public' directory
+app.use(express.static('public'));
+
+// Serve JS and CSS files from their specific directories
+app.use('/js', express.static(path.join(__dirname, 'public/js')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
+
+// Parse URL-encoded and JSON bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Setting up session for user
+app.use(session({
+    secret: 'secret-key', // choose a secret string which is used to sign the session ID cookie
+    resave: false, // do not force session to be saved back to the session store
+    saveUninitialized: false, // do not save uninitialised sessions to the store
+}));
+
+// Middleware for every request to store referrer URL or original URL
+app.use((req, res, next) => {
+    // Store the referrer URL or original URL in the session
+    req.session.redirectTo = req.headers.referer || req.originalUrl;
+    // Continue to the next middleware in the stack
+    next();
+  });
+
+// Create a connection to the database
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'cityUniversitySubhaanMajid1',
+    database: 'calories'
+});
+
+// Connect to the database and handle errors
+db.connect(err => {
+    if (err) {
+        throw err;
+    }
+    console.log('MySQL connected...');
+});
+
+// Route for calculating BMR and caloric intake
+app.post('/calculate', (req, res) => {
+    // Get data from the request body
+    const { name, gender, age, weight, height, activity, goal } = req.body;
+    // Calculation logic here
+    let bmr;
+    let calorieIntake;
+
+
+    // Adjust calorie intake based on goal
+    if (goal === 'lose') {
+        // Decrease by 500 to lose around 1 lb per week
+        calorieIntake -= 500;
+    } else if (goal === 'gain') {
+        // Increase by 500 to gain around 1 lb per week
+        calorieIntake += 500;
+    }
+
+    // format result
+    const result = {
+        name: name,
+        calorieIntake: Math.round(calorieIntake)
+    };
+
+    // SQL query to insert data into the 'Calories' table
+    const sql = 'INSERT INTO Calories (name, gender, age, weight, height, activity, goal, calories) VALUES ?';
+    const values = [
+        [name, gender, age, weight, height, activity, goal, Math.round(calorieIntake)]
+    ];
+    db.query(sql, [values], (err, result) => {
+        if (err) {
+            console.error('Database Query Error for /calculate route:', err);
+            return res.status(500).json({ message: 'An error occurred while saving your data' });
+        }
+        console.log("Number of records inserted: " + result.affectedRows);
+    });
+
+    // Send a response back to the client
+    res.json({ message: `The calculated calorie intake for ${name} is ${calorieIntake}` });
+});
+
+app.post('/trackerData', (req, res) => {
+    // Extract the userId from the request session
+    const { userId } = req.session;
+
+    // If the user isn't logged in, respond with an error
+    if (!userId) {
+        return res.status(401).json({ message: 'You must be logged in to do that' });
+    }
+
+    // Get data from the request body
+    const { date, caloriesEaten, caloriesBurned, weight } = req.body;
+
+    // SQL query to insert data into the 'Nutrition' table
+    const sql = 'INSERT INTO Nutrition (user_Id, date, caloriesEaten, caloriesBurned, weight) VALUES ?';
+    const values = [
+        [userId, date, caloriesEaten, caloriesBurned, weight]
+    ];
+    db.query(sql, [values], (err, result) => {
+        if (err) {
+            console.error('Database Query Error for /trackerData route:', err);
+            return res.status(500).json({ message: 'An error occurred while saving your data' });
+        }
+        console.log("Number of records inserted: " + result.affectedRows);
+        // Send a response back to the client
+        res.json({ message: `Data for ${date} is saved` });
+    });
+});
+
+app.get('/trackerData', (req, res) => {
+    // Extract the userId from the request session
+    const { userId } = req.session;
+
+    // If the user isn't logged in, respond with an error
+    if (!userId) {
+        return res.status(401).json({ message: 'You must be logged in to do that' });
+    }
+
+    // SQL query to get data from the 'Nutrition' table
+    const sql = 'SELECT * FROM Nutrition WHERE user_id = ? ORDER BY date DESC';
+    db.query(sql, [userId], (err, results) => {
+        if (err) throw err;
+
+        // Send the results back to the client
+        res.json(results);
+    });
+});
+
+// User registration route
+app.post('/register', async (req, res) => {
+    console.log(req.body);
+    const { username, email, password } = req.body;
+
+    // Validation
+    if (!username || !email || !password) {
+        return res.status(400).json({ message: 'Please fill in all fields' });
+    }
+    if (username.length < 5) {
+        return res.status(400).json({ message: 'Username should be at least 5 characters' });
+    }
+    // Validate email format
+    
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: 'Invalid email format' });
+    }
+    if (password.length < 6) {
+        return res.status(400).json({ message: 'Password should be at least 6 characters' });
+    }
+
+    // Check if username is already in use
+    const sqlSelect = 'SELECT * FROM Users WHERE username = ?';
+    db.query(sqlSelect, [username], async (err, result) => {
+        if (err) throw err;
+
+        if (result.length > 0) {
+            return res.status(400).json({ message: 'Username is already in use' });
+        }
+
+        // Insert the user data into the 'Users' table
+        const sqlInsert = 'INSERT INTO Users (username, email, password) VALUES ?';
+        const values = [
+            [username, email, hashedPassword]
+        ];
+        db.query(sqlInsert, [values], (err, result) => {
+            if (err) throw err;
+            console.log("Number of records inserted: " + result.affectedRows);
+
+            // Respond to the client
+            res.json({ message: 'Registration successful' });
+        });
+    });
+});
+
+// User login route
+app.post('/login', async(req, res) => {
+    const { username, password } = req.body;
+
+    // Validation
+    if (!username || !password) {
+        return res.status(400).json({ message: 'Please fill in all fields' });
+    }
+
+    // Check if the user exists
+    const sqlSelect = 'SELECT * FROM Users WHERE username = ?';
+    db.query(sqlSelect, [username], async (err, result) => {
+        if (err) { 
+            console.error(err);
+            throw err;
+        }
+        console.log(result);
+        if (result.length === 0) {
+            return res.status(400).json({ message: 'User does not exist' });
+        }
+
+        // Retrieve the hashed password from the database query result
+        const hashedPasswordFromDatabase = result[0].password;
+
+        // Verify the password with bcrypt
+        const validPassword = await bcrypt.compare(password, hashedPasswordFromDatabase);
+        console.log(validPassword);
+        if (validPassword) {
+            // Passwords match, log the user in
+            req.session.userId = result[0].id;  // Set user_id on the session
+            res.json({ message: 'Login successful' });
+        } else {
+            // Passwords don't match
+            res.status(401).json({ message: 'Incorrect password' });
+        }
+    });
+});
+
+
+
+// Define a route handler for GET requests to all the URLs.
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+app.get('/calculator', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'calculator.html'));
+});
+app.get('/tracker', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'tracker.html'));
+});
+app.get('/gyms', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'gyms.html'));
+});
+app.get('/api/user', function(req, res) {
+    if (req.session.userId) {
+        res.json({ userId: req.session.userId });
+    } else {
+        res.status(401).json({ message: 'User is not logged in' });
+    }
+});
+app.get('/login', (req, res) => {
+    // Check if the user is already logged in
+    if (req.session.userId) {
+        // If the user is logged in, show a message saying they're already logged in
+        res.send('You are already logged in. Press the back button to return to the web page.');
+    } else {
+        // If the user is not logged in, render the login page
+        res.sendFile(path.join(__dirname, 'views', 'login.html'));
+    }
+});
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'register.html'));
+});
+
+//Logout route
+app.get('/logout', function(req, res) {
+    // Store the redirect url
+    const redirectTo = req.session.redirectTo || '/';
+    
+    // Destroy the user session
+    req.session.destroy(function(err) {
+        if(err) {
+            console.log(err);
+        } else {
+            // Redirect to the previous page
+            res.redirect(redirectTo + '?message=Logout successful');
+        }
+    });
+});
+
+
+// Start the server
+app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000');
+});
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Setting the title of the page -->
+    <title>Nutrition Tracker</title>
+
+    <!-- Linking the page stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Setting the favicon of the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+    <!-- Importing Chart.js library for creating charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Banner image for the page -->
+        <div class="banner-container">
+            <img src="/images/banner.png" alt="Banner">
+        </div>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <!-- Navigation links -->
+            <li><a href="/">Home</a></li>
+            <li><a href="/calculator">Calorie Calculator</a></li>
+            <li><a href="/tracker">Nutrition Tracker</a></li>
+            <li><a href="/gyms">Nearby Gyms</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Track your Nutrition</h2>
+
+        <!-- Nutrition tracking form -->
+        <form id="tracker-form" action="/trackerData" method="post">
+            <!-- Input fields for the form -->
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date" required><br>
+
+            <label for="calories-eaten">Calories Eaten:</label><br>
+            <input type="number" id="caloriesEaten" name="caloriesEaten" required><br>
+
+            <label for="calories-burned">Calories Burned:</label><br>
+            <input type="number" id="caloriesBurned" name="caloriesBurned" required><br>
+
+            <label for="weight">Today's Weight (in lbs):</label><br>
+            <input type="number" id="weight" name="weight" required><br>
+
+            <!-- Submit button for the form -->
+            <input type="submit" value="Submit">
+        </form>
+    
+        <!-- History table -->
+        <h2>Your History</h2>
+        <table id="history-table">
+            <thead>
+                <!-- Column headings -->
+                <tr>
+                    <th>Date</th>
+                    <th>Calories Eaten</th>
+                    <th>Calories Burned</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table to be populated dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Progress chart -->
+        <h2>Your Progress</h2>
+        <canvas id="progress-chart"></canvas>
+            <!-- Chart to be populated dynamically -->
+    </div>
+
+    <!-- Linking the page script -->
+    <script src="/js/script.js"></script>
+
+    <!-- Script to handle URL parameters and display messages -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            var params = new URLSearchParams(window.location.search);
+
+            // Check if the 'message' parameter is present
+            if(params.has('message')) {
+                // Display the message to the user
+                alert(params.get('message'));
+            }
+        };
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Setting the title of the page -->
+    <title>Register</title>
+
+    <!-- Linking the page stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Setting the favicon of the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Main heading of the page -->
+    <h1>Register</h1>
+
+    <!-- Registration form -->
+    <form id="register-form">
+        <!-- Username input field -->
+        <input type="text" id="username" name="username" placeholder="Username" required>
+
+        <!-- Email input field -->
+        <input type="text" id="email" name="email" placeholder="Email" required>
+
+        <!-- Password input field -->
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <!-- Submit button for the form -->
+        <button type="submit">Register</button>
+    </form>
+    
+    <!-- Linking the script for handling registration -->
+    <script src="/js/register.js"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Setting the title of the page -->
+    <title>Login</title>
+
+    <!-- Linking the page stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Setting the favicon of the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Main heading of the page -->
+    <h1>Login</h1>
+
+    <!-- Login form -->
+    <form id="login-form" action="/login" method="post">
+        <!-- Username input field -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <!-- Password input field -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+
+        <!-- Submit button for the form -->
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- Linking the script for handling login -->
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Setting the title of the page -->
+    <title>Home Page</title>
+
+    <!-- Linking the page stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Setting the favicon of the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Banner section of the page -->
+        <div class="banner-container">
+            <img src="/images/banner.png" alt="Banner">
+        </div>
+    </header>
+
+    <!-- Navigation bar of the page -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/calculator">Calorie Calculator</a></li>
+            <li><a href="/tracker">Nutrition Tracker</a></li>
+            <li><a href="/gyms">Nearby Gyms</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Main content section of the page -->
+    <div class="container">
+        <h2>Home Page</h2>
+        <p>Calorie Calculator: Estimate your daily calorie needs based on personal details and activity levels.</p>
+        <p>Nutrition Tracker: Log and monitor daily food intake for a comprehensive understanding of your dietary nutrition.</p>
+        <p>Nearby Gyms: Find fitness centers with our Nearby Gyms locator, guiding you to the closest workout spots.</p>
+    </div>
+
+    <!-- Script to show alert messages based on URL parameters -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            var params = new URLSearchParams(window.location.search);
+
+            // Check if the 'message' parameter is present
+            if(params.has('message')) {
+                // Display the message to the user
+                alert(params.get('message'));
+            }
+        };
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nearby Gyms</title>
+
+    <!-- Stylesheet for the page -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Favicon for the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+
+       
+<body>
+    <header>
+        <!-- Banner for the page -->
+        <div class="banner-container">
+            <img src="/images/banner.png" alt="Banner">
+        </div>
+    </header>
+
+    <!-- Navigation menu for the website -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/calculator">Calorie Calculator</a></li>
+            <li><a href="/tracker">Nutrition Tracker</a></li>
+            <li><a href="/gyms">Nearby Gyms</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Main content of the page -->
+    <div class="container">
+        <h1>Nearby Gyms</h1>
+
+        <!-- Instructions for the user -->
+        <P>Click the button below to show Gyms that are closest to you!</P>
+
+        <!-- Button to find nearby gyms -->
+        <button onclick="getLocation()">Find Nearby Gyms</button>
+    </div>
+
+    <!-- Inline JavaScript to display alert messages from URL parameters -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            var params = new URLSearchParams(window.location.search);
+
+            // Check if the 'message' parameter is present
+            if(params.has('message')) {
+                // Display the message to the user
+                alert(params.get('message'));
+            }
+        };
+    </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calorie Calculator</title>
+
+    <!-- Stylesheet for the page -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <!-- Favicon for the page -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Banner for the page -->
+        <div class="banner-container">
+            <img src="/images/banner.png" alt="Banner">
+        </div>
+    </header>
+
+    <!-- Navigation menu for the website -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/calculator">Calorie Calculator</a></li>
+            <li><a href="/tracker">Nutrition Tracker</a></li>
+            <li><a href="/gyms">Nearby Gyms</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content for the Calorie Calculator -->
+    <div class="container">
+        <h2>Calculate your Calories</h2>
+    </div>
+
+    <!-- Form for the Calorie Calculator -->
+    <form id="calculator-form" action="/calculate" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <label for="weight">Weight (in lbs):</label><br>
+        <input type="number" id="weight" name="weight" required><br>
+
+        <label for="height">Height (in inches):</label><br>
+        <input type="number" id="height" name="height" required><br>
+
+        <label for="activity">Activity Level:</label><br>
+        <select id="activity" name="activity" required>
+            <option value="">Select...</option>
+        </select><br>
+
+        <label for="goal">Goal:</label><br>
+        <select id="goal" name="goal" required>
+            <option value="">Select...</option>
+            <option value="lose">Lose Weight</option>
+            <option value="maintain">Maintain Weight</option>
+            <option value="gain">Gain Weight</option>
+        </select><br>
+
+        <!-- Submit button for the form -->
+        <input type="submit" value="Calculate">
+    </form>
+
+    <!-- External JavaScript file -->
+    <script src="/js/script.js"></script>
+
+     <!-- Inline JavaScript to display alert messages from URL parameters -->
+    <script>
+        window.onload = function() {
+            // Get the URL parameters
+            var params = new URLSearchParams(window.location.search);
+
+            // Check if the 'message' parameter is present
+            if(params.has('message')) {
+                // Display the message to the user
+                alert(params.get('message'));
+            }
+        };
+    </script>
+
+</body>
+
+</html>
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the user's ID when the page loads
+    fetch('/api/user')
+    .then(response => response.json())
+    .then(data => {
+        console.log('User ID:', data.userId);
+        // Store the user ID in a global variable for later use
+        window.userId = data.userId;
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    // Get the form element
+    var form = document.getElementById('calculator-form');
+
+    // Functionality if form is present
+    if (form) {
+        // Event listener for form submission
+        form.addEventListener('submit', function (event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+
+            // Get the values of the form fields
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var height = document.getElementById('height').value;
+            var weight = document.getElementById('weight').value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+            var activity = document.getElementById('activity').value;
+            var goal = document.querySelector('select[name="goal"]').value;
+
+            console.log(`Form submitted with: 
+                Name: ${name}
+                Gender: ${gender}
+                Age: ${age}
+                Weight: ${weight}
+                Height: ${height}
+                Activity Level: ${activity}
+                Goal: ${goal}`);
+
+            // Validate the form fields
+            if (age === '' || height === '' || weight === '') {
+                alert('All fields are required!');
+                return;  // exit the function if fields are empty
+            } else if (age < 0 || height < 0 || weight < 0) {
+                alert('Values must be positive!');
+                return;  // exit the function if fields are negative
+            }
+
+            // Construct an object with the form data
+            var data = {
+                name: name,
+                gender: gender,
+                age: parseInt(age),
+                weight: parseFloat(weight),
+                height: parseFloat(height),
+                activity: activity,
+                goal: goal
+            };
+
+            console.log('Data to be sent to the server:', data);
+
+            // Send a POST request to the server
+            fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Server response:', data);
+                alert(data.message);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    }
+
+    // Fetching tracker data when the tracker page loads
+    var trackerForm = document.getElementById('tracker-form');
+    if (trackerForm) {
+        window.onload = function() {
+            getData();
+        }
+
+        // When the tracker form is submitted
+        trackerForm.addEventListener('submit', function(e) {
+            console.log("Form submission event triggered.");
+            e.preventDefault();
+
+            // Get form data
+            var date = document.getElementById('date').value;
+            var caloriesEaten = document.getElementById('caloriesEaten').value;
+            var caloriesBurned = document.getElementById('caloriesBurned').value;
+            var weight = document.getElementById('weight').value;
+            var user_id = sessionStorage.getItem('user_id');
+
+            // Send a POST request
+            var data = {
+                date: date,
+                caloriesEaten: parseInt(caloriesEaten),
+                caloriesBurned: parseInt(caloriesBurned),
+                weight: parseFloat(weight),
+                user_id: window.user_id
+            };
+
+            fetch('/trackerData', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Server response:', data);
+                alert(data.message);
+                getData();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+        });
+
+        function getData() {
+            var user_id = sessionStorage.getItem('user_id');
+            // Send a GET request to '/trackerData'
+            fetch('/trackerData?user_id=${window.user_id}')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Server response:', data);
+                    
+                    // Clear the existing table rows
+                    const table = document.getElementById('history-table').getElementsByTagName('tbody')[0];
+                    table.innerHTML = '';
+        
+                    // Clear the existing chart data
+                    const ctx = document.getElementById('progress-chart').getContext('2d');
+                    if(window.chart) {
+                        window.chart.destroy();
+                    }
+
+                    // Sort the data array by date in ascending order
+                    data.sort((a, b) => new Date(a.date) - new Date(b.date));
+        
+                    data.forEach(item => {
+                        // Convert date string to a JavaScript Date object
+                        var date = new Date(item.date);
+                        // Convert date object to local date string
+                         var localDate = date.toLocaleDateString();
+
+                        // Add a new row to the table for each item
+                        const row = table.insertRow();
+                        row.innerHTML = `
+                            <td>${localDate}</td>
+                            <td>${item.caloriesEaten}</td>
+                            <td>${item.caloriesBurned}</td>
+                            <td>${item.weight}</td>
+                        `;
+                    });
+        
+                    // Create a new chart with the data
+                    window.chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data.map(item => {
+                                var date = new Date(item.date);
+                                return date.toLocaleDateString();
+                            }),
+                            datasets: [{
+                                label: 'Weight',
+                                data: data.map(item => item.weight),
+                                fill: false,
+                                borderColor: "#2b50a0",
+                                tension: 0.1
+                            }]
+                        },
+                        options: {
+                            responsive: false,
+                            scales: {
+                                x: {
+                                    display: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Date'
+                                    }
+                                },
+                                y: {
+                                    display: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Weight (lbs)'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+        
+        // Fetch data every 30 seconds (30000 milliseconds)
+        setInterval(getData, 30000);
+    }
+
+    // Registration form handling
+    var registrationForm = document.getElementById('registration-form');
+    if (registrationForm) {
+    registrationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Validate the form data
+        if (username === '' || password === '' || confirmPassword === '') {
+            alert('All fields are required!');
+            return;  // exit the function
+        } else if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;  // exit the function
+        }
+
+        // Prepare data to be sent to the server
+        var data = {
+            username: username,
+            password: password
+        };
+
+        // Send a POST request to the server
+        fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Server response:', data);
+            if (data.success) {
+                // Redirect user to login page or home page
+                window.location.href = '/login';
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+}
+
+    // Login form handling
+    var loginForm = document.getElementById('login-form');
+    if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Validate the form data
+        if (username === '' || password === '') {
+            alert('Both fields are required!');
+            return;  // exit the function
+        }
+
+        // Prepare data to be sent to the server
+        var data = {
+            username: username,
+            password: password
+        };
+
+        // Send a POST request to the server
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Server response:', data);
+            if (data.success) {
+                // Redirect user to home page
+                window.location.href = '/';
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+}
+});
+
+// Wait for the document to fully load
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Get the registration form element
+    var form = document.getElementById('register-form');
+
+    // Check if the form exists
+    if (form) {
+
+        // Add an event listener for form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+
+            // Get the values of the form fields
+            var username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Validate the form fields
+            if (username === '' || email === '' || password === '') {
+                alert('All fields are required!');
+                return;
+            }
+
+            // Construct an object with the user's data
+            var data = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            // Send a POST request to the server with the user's data
+            fetch('/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                // If the server responds with a non-ok status code (not 2xx), throw an error
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                // Parse the response as JSON
+                return response.json();
+            })
+            .then(data => {
+                // Display the server's message
+                if (data.message) {
+                    alert(data.message);
+                }
+                // If the registration was successful, redirect the user to the login page
+                if (data.success) {
+                    window.location.href = '/login';
+                }
+            })
+            // Log any errors that occurred during the request
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    }
+});
+// Define a logout function
+function logout() {
+    // Send a GET request to the server to log the user out
+    fetch('/logout', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => {
+        // If the server responds with a non-ok status code (not 2xx), throw an error
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
+        // Parse the response as JSON
+        return response.json();
+    })
+    .then(data => {
+        // If the server responded that the logout was successful
+        if (data.message === 'Logout successful') {
+            alert('Logged out successfully!');
+        }
+    })
+    // Catch and display any errors that occurred during the request
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+// Attach the logout function to the logout button's click event
+document.getElementById('logout').addEventListener('click', logout);
+
+// Wait until the document has fully loaded to ensure all elements are accessible
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve the login form
+    var form = document.getElementById('login-form');
+
+    // If the form exists
+    if (form) {
+        // Add a submit event listener
+        form.addEventListener('submit', function(event) {
+            // Prevent the form from doing a default form submission
+            event.preventDefault();
+            
+            // Retrieve the input values from the form
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check if the input fields are filled
+            if (username === '' || password === '') {
+                alert('All fields are required!');
+                return;
+            }
+            
+            // Prepare the data to be sent to the server
+            var data = {
+                username: username,
+                password: password
+            };
+
+            // Send a POST request to the server with the login data
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    // If the response was not ok (status other than 2xx), throw error
+                    throw new Error(response.statusText);
+                }
+
+                // Parse the response as JSON
+                return response.json();
+            })
+            .then(data => {
+                // If the server responded that the login was successful
+                if (data.message === 'Login successful') {
+                    alert('Logged in successfully!');
+                    // Redirect the user to the tracker page
+                    window.location.href = '/tracker';
+                } else {
+                    // Unexpected success message
+                    alert('Unexpected success message: ' + data.message);
+                }
+            })
+            // Catch and display any errors that occurred during the request
+            .catch((error) => {
+                alert('Failed to log in. Please check your username and password.');
+                console.error('Error:', error);
+            });
+        });
+    }
+});
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.banner-container img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+nav {
+    background-color: #2b50a0;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #aeceff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-chart {
+    width: 600px;   
+    height: 450px;
+}
